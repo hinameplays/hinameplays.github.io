@@ -3,13 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="main.css" />
-        <title>Home | hinameplays</title>
-        <script>
-            function updateActive(element) {
-                document.getElementsByClassName("active")[0].classList.remove("active");
-                element.classList.add("active");
-            }
-        </script>
+        <title>Legal | hinameplays</title>
     </head>
 
     <body class="body">
@@ -18,17 +12,17 @@
                 <nav>
                     <p style="font-size: 1.2rem;">Menu</p>
                     <ul>
+                        <li class="menuitem">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="menuitem">
+                            <a href="projects.html">Projects</a>
+                        </li>
+                        <li class="menuitem">
+                            <a href="blips.html">Blips</a>
+                        </li>
                         <li class="menuitem active">
-                            <a href="index.html" onclick="updateActive(this);">Home</a>
-                        </li>
-                        <li class="menuitem">
-                            <a href="projects.html" onclick="updateActive(this);">Projects</a>
-                        </li>
-                        <li class="menuitem">
-                            <a href="blips.html" onclick="updateActive(this);">Blips</a>
-                        </li>
-                        <li class="menuitem">
-                            <a href="legal.html" onclick="updateActive(this);">Legal</a>
+                            <a href="legal.html">Legal</a>
                         </li>
                     </ul>
                 </nav>

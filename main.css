@@ -175,13 +175,13 @@ a:focus {
     display: flex;
 }
 .icon {
-    width: 32px;
+    width: 48px;
     padding: 2px;
 }
 .list-style-none {
     list-style: none;
     display: flex;
-    line-height: 32px;
+    line-height: 48px;
     box-sizing: border-box;
     flex-wrap: wrap;
     margin-bottom: 0;

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="main.css" />
+        <title>Home | hinameplays</title>
+        <script>
+            function updateActive(element) {
+                document.getElementsByClassName("active")[0].classList.remove("active");
+                element.classList.add("active");
+            }
+        </script>
+    </head>
+
+    <body class="body">
+        <div class="flex-wrapper">
+            <aside class="nav">
+                <nav>
+                    <p style="font-size: 1.2rem;">Menu</p>
+                    <ul>
+                        <li class="menuitem active">
+                            <a href="index.html" onclick="updateActive(this);">Home</a>
+                        </li>
+                        <li class="menuitem">
+                            <a href="projects.html" onclick="updateActive(this);">Projects</a>
+                        </li>
+                        <li class="menuitem">
+                            <a href="blips.html" onclick="updateActive(this);">Blips</a>
+                        </li>
+                        <li class="menuitem">
+                            <a href="legal.html" onclick="updateActive(this);">Legal</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <main class="content">
+                <article class="article">
+                    <h1>hinameplays ― Philipp Heinrich</h1>
+                    <p>This is my personal website.</p>
+                    <p>It mainly serves to document my projects and distribute information.</p>
+                    <p>Check out my (somewhat complete) <a href="projects.html">projects</a> or the "<a href="blips.html">blips</a>", which are small blog-like entries about ongoing projects.</p>
+                    <h2>About</h2>
+                    <p>This webpage is only maintained "on-the-side" to what I usually do. If you find any mistakes, want more information or have any suggestions, feel free to shoot me an
+                        <a href="mailto:heinrich-karow@gmx.de" title="heinrich-karow@gmx.de">email</a>.</p>
+                    <p>I'll mainly post about my hobbies (being mechanical and electrical engineering, chemistry, programming among other things).</p>
+                </article>
+            </main>
+
+            <footer class="footer">
+                <div class="line-grid">
+                    <ul class="list-style-none" style="width: 20%">
+                        <li class="list-style-none">
+                            <a class="aref" title="Homepage" href="index.html">
+                                <img
+                                    class="icon"
+                                    src="logo-transparent.png"
+                                    alt="Icon"
+                                />
+                            </a>
+                            <span class="bot-row">© 2021 Philipp Heinrich</span>
+                        </li>
+                    </ul>
+                    <ul class="list-style-none" style="width: 30%"></ul>
+                    <ul class="list-style-none" style="width: 49%">
+                        <li class="list-style-none">
+                            <p class="bot-row">
+                                By using this site you agree to the
+                                <a href="legal.html">legal terms</a>. Visit me
+                                on
+                                <a href="https://www.github.com/hinameplays"
+                                    >GitHub</a
+                                >.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -55,9 +55,8 @@ body {
 }
 
 .content {
-    margin: 0;
+    margin: var(--main-content-margin);
     max-width: var(--main-content-max-width);
-    position: static;
 }
 
 .content .article {
@@ -149,11 +148,9 @@ a:focus {
     overflow-x: hidden;
     overflow-y: hidden;
     padding-left: var(--vertical-padding);
-    position: static;
+    position: fixed;
     top: 0;
     width: var(--nav-width);
-    height: initial;
-    position: initial;
 }
 
 .nav a {

@@ -42,6 +42,7 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     margin: 0;
+    height: 100%;
 }
 
 /* Structure */
@@ -54,8 +55,9 @@ body {
 }
 
 .content {
-    margin: var(--main-content-margin);
+    margin: 0;
     max-width: var(--main-content-max-width);
+    position: static;
 }
 
 .content .article {
@@ -134,18 +136,24 @@ a:focus {
     outline: none !important;
 }
 
+/* Default Image Canvas display */
+.img {
+    max-width: 40%;
+}
+
 /* Navbox settings */
 
 .nav {
     box-sizing: border-box;
-    height: 100vh;
     left: 0;
     overflow-x: hidden;
     overflow-y: hidden;
     padding-left: var(--vertical-padding);
-    position: fixed;
+    position: static;
     top: 0;
     width: var(--nav-width);
+    height: initial;
+    position: initial;
 }
 
 .nav a {
@@ -175,7 +183,7 @@ a:focus {
 }
 
 .nav nav {
-    padding: var(--document-horizontal-margin) 0;
+    padding: 0;
 }
 
 .nav nav ul {

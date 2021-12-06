@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../main.css" />
+        <title>TI Blip | hinameplays</title>
+    </head>
+
+    <body class="body">
+        <div class="flex-wrapper">
+            <aside class="nav">
+                <nav>
+                    <p style="font-size: 1.2rem;">Menu</p>
+                    <ul>
+                        <li class="menuitem">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="menuitem">
+                            <a href="projects.html">Projects</a>
+                        </li>
+                        <li class="menuitem active">
+                            <a href="blips.html">Blips</a>
+                        </li>
+                        <li class="menuitem">
+                            <a href="legal.html">Legal</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <main class="content">
+                <article class="article">
+                    <h1>The TI MSP430 FR6989 Launchpad</h1>
+                    <i id="page-toc-0" class="page-toc-scroll-marker">TOC marker</i>
+                    <h2>What is it?</h2>
+                    <p>The TI Launchpad series consists of a variety of development boards. These boards highlight the features of a certain TI chip 
+                        using pre-assembled hardware. Thus, anyone can toy around with new features without having to assemble a single board computer by themselves.
+                        dev-boards also serve as a reference design for hardware integrators.</p>
+                    <p>The FR6989 Launchpad features a 16-bit MSP430 microcontroller (MCU) running at a whopping 16MHz. This specific board also has programmable buttons and LEDs, 
+                        the standard 40pin TI "Booster Pack" connector and a small IO board. This board accepts an USB micro-B cable and uses a M430 chip to provide power to the MCU and a debugging interface.
+                        The MCU itself has an integrated CPU, 128KB of integrated FRAM storage and multiple general purpose circuits like timers, temperature probes, comparators and 256 bit AES. What makes this board 
+                        special is an custom integrated segmented LCD.</p>
+                    <i id="page-toc-1" class="page-toc-scroll-marker">TOC marker</i>
+                    <h2>What is its use?</h2>
+                    <p>This board is a full fledged computer. Not a strong one, admittedly, but a rather useful one. The CPU being 16-bit can process, encode and record complicated data while only consuming milli-Watts of power. 
+                        The 430 series from TI is crazy efficient and the little processing power is just enough. 
+                    </p>
+                    <p> An example use case for this board is a Desktop indoor data logger displaying temperature, humidity, time etc. It can also serve as a alarm clock or radio, given the necessary accessories like 
+                        sensors, an alarm bell/speaker and an antenna. It can also be used for scientific data logging. I used it previously for calorimetric calculations with multiple temperature and pressure probes.
+                    </p>
+                    <i id="page-toc-2" class="page-toc-scroll-marker">TOC marker</i>
+                    <h2>Why doesn't everyone use it?</h2>
+                    <p>With the hardware being as good as it is, one does wonder why basically nobody uses these things. The TI Launchpads have a few major drawbacks:</p>
+                    <ul>
+                        <li>The software provided by TI is a nightmare. The code designated to run on the MSP430 is written in C, which is fine. C is easily the best programming language for this task with 
+                            Windows and Linux etc. also being based on C. The libraries needed to run programs on the MSP430 are somewhat special and quirky in certain ways, so one does need to know quite a bit
+                            about C and programming in order to fully utilise the MSP430. </li>
+                        <li>It is a development board. The board is being marketed to major corporations for them to test MSP430 code and develop their own board designs. Thus it is somewhat hard to get and at around 30 bucks 
+                            semi-expensive.</li>
+                        <li>TI is not that known in the hobbiyst space for their dev-boards. TI mainly markets their products to big corporations and not hobbiysts, so they tend to go with products specifically marketed to them like Arduinos.
+                            There is a god chance you have TI electronics in your car or in the planes flying above your head, but not at home.
+                        </li>
+                    </ul>
+                    <i id="page-toc-3" class="page-toc-scroll-marker">TOC marker</i>
+                    <h2>Final verdict</h2>
+                    <p>I personally quite like the possibilities of this Board. I own three and use them more often than e.g. the Arduino Uno when it comes to measuring stuff. This series of chip is astonishingly capable given its efficiency,
+                        but not really user friendly. I am interested in what TI will introduce going forward, but this board still fills that special niche between using a 64-bit PC for real-time data operations and 
+                        a SBC one might interact with. I personally do not think TIs ARM chips will quite live up to this standard.
+                    </p>
+                </article>
+            </main>
+
+            <nav class="page-toc">
+                <ul id="page-toc-container">
+                    <li><a href="#page-toc-0">What is it?</a></li>
+                    <li><a href="#page-toc-1">What is its use?</a></li>
+                    <li><a href="#page-toc-2">Why doesn't everyone use it</a></li>
+                    <li><a href="#page-toc-3">Final verdict</a></li>
+                </ul>
+            </nav>
+
+            <footer class="footer">
+                <div class="line-grid">
+                    <ul class="list-style-none" style="width: 20%">
+                        <li class="list-style-none">
+                            <a class="aref" title="Homepage" href="index.html">
+                                <img
+                                    class="icon"
+                                    src="logo-transparent.png"
+                                    alt="Icon"
+                                />
+                            </a>
+                            <span class="bot-row">© 2021 Philipp Heinrich</span>
+                        </li>
+                    </ul>
+                    <ul class="list-style-none" style="width: 30%"></ul>
+                    <ul class="list-style-none" style="width: 49%">
+                        <li class="list-style-none">
+                            <p class="bot-row">
+                                By using this site you agree to the
+                                <a href="legal.html">legal terms</a>. Visit me
+                                on
+                                <a href="https://www.github.com/hinameplays"
+                                    >GitHub</a
+                                >.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

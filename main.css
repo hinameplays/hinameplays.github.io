@@ -135,10 +135,21 @@ a:focus {
     outline: none !important;
 }
 
-/* Default Image Canvas display */
+/* Article display*/
+
 .img {
-    min-width: 30%;
+    width: 95%;
+}
+
+.left {
     max-width: 50%;
+    min-width: 30%;
+    float: left;
+}
+
+.right {
+    max-width: 50%;
+    min-width: 30%;
     float: right;
 }
 

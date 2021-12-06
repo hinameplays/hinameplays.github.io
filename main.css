@@ -221,6 +221,7 @@ a:focus {
     .nav {
       height: initial;
       position: initial;
+      padding-bottom: 0;
     }
     h1 {
       margin-top: 1rem;

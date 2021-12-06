@@ -3,14 +3,14 @@
     --text-color: #4d5757;
     --emphasis-color: #2d3737;
     --border-color: #e1e7e8;
-    --code-bg-color: #fafafa;
-    --accent-color: #c1cacc;
+    --accent-color: #656c6e;
     --link-color: #2980b9;
+    --sublink-color: #491b8d;
 
     --document-horizontal-margin: 80px;
     --main-content-margin: 0 auto;
     --main-content-max-width: 800px;
-    --nav-width: 150px;
+    --nav-width: 160px;
     --vertical-padding: 40px;
 }
 
@@ -20,9 +20,9 @@
         --text-color: #8a8a8b;
         --emphasis-color: #aaaaab;
         --border-color: rgb(40, 40, 41);
-        --code-bg-color: rgb(33, 33, 34);
         --accent-color: rgb(80, 80, 81);
         --link-color: #2980b9;
+        --sublink-color: #7646bd;
     }
 }
 
@@ -88,26 +88,48 @@ h2 {
     padding-top: 1.5rem;
     position: -webkit-sticky;
     position: sticky;
-    top:0;
+    top: 0;
+}
+
+h2::before,
+h3::before {
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--color-background);
+    color: var(--accent-color);
+    content: ">";
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-left: -2rem;
+    padding-right: 0.5rem;
+    text-align: right;
+    width: 1.5rem;
+}
+
+.main-content h1:first-of-type {
+    margin-top: 0;
+}
+
+h2 + h3 {
+    margin-top: 1.5rem;
 }
 
 a,
 a:link,
 a:visited {
-  color: var(--link-color);
-  text-decoration: none;
+    color: var(--link-color);
+    text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 a:active,
 a:focus {
-  text-decoration: underline;
-  outline: none !important;
+    text-decoration: underline;
+    outline: none !important;
 }
-
 
 /* Navbox settings */
 
@@ -161,6 +183,57 @@ a:focus {
 
 .nav nav li.active {
     font-weight: bolder;
+}
+
+/* Styling for TOC on right page side */
+.page-toc {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-right: var(--vertical-padding);
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: var(--nav-width);
+}
+
+@media (max-width: 1200px) {
+    .page-toc {
+        display: none;
+    }
+}
+
+.page-toc ul {
+    list-style: none;
+    margin: 0;
+    padding: var(--document-horizontal-margin) 0;
+}
+
+.page-toc a {
+    color: var(--sublink-color);
+    display: flex;
+    font-size: 0.9rem;
+    overflow: hidden;
+    padding-bottom: 0;
+    padding-top: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.page-toc a:hover {
+    text-decoration: none;
+}
+
+/* Toc markers are used as anchors since sticky headers interfere with scrollto when scrolling up. */
+
+.page-toc-scroll-marker {
+    display: block;
+    height: 1px;
+    overflow: hidden;
+    position: relative;
+    top: 1px;
+    width: 1px;
 }
 
 /* Footer settings */

@@ -1,9 +1,9 @@
 :root {
     --background-color: rgb(255, 255, 255);
-    --text-color: #4d5757;
+    --text-color: #2a3131;
     --emphasis-color: #2d3737;
     --border-color: #e1e7e8;
-    --accent-color: #656c6e;
+    --accent-color: #80888a;
     --link-color: #2980b9;
     --sublink-color: #491b8d;
 
@@ -22,7 +22,7 @@
         --border-color: rgb(40, 40, 41);
         --accent-color: rgb(80, 80, 81);
         --link-color: #2980b9;
-        --sublink-color: #7646bd;
+        --sublink-color: #74559c;
     }
 }
 
@@ -103,6 +103,10 @@ h3::before {
     padding-right: 0.5rem;
     text-align: right;
     width: 1.5rem;
+}
+
+.backset {
+    color: var(--accent-color)
 }
 
 .main-content h1:first-of-type {

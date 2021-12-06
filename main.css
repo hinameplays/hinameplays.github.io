@@ -215,17 +215,17 @@ a:focus {
 }
 
 @media (max-width: 978px) {
-    .main-content {
+    .content {
       margin: 0;
     }
     .nav {
       height: initial;
       position: initial;
     }
-    .main-nav nav {
+    .nav {
       padding: 0;
     }
-  }
+}
 
 .page-toc ul {
     list-style: none;

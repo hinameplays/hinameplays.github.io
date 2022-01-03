@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../main.css" />
-        <title>Website Blip | hinameplays</title>
+        <title>Word Blip | hinameplays</title>
     </head>
 
     <body class="body">
@@ -31,18 +31,39 @@
 
             <main class="content">
                 <article class="article">
-                    <h1>Developing a Webpage</h1>
+                    <h1>Developing a custom Word Export Tool</h1>
                     <i id="page-toc-0" class="page-toc-scroll-marker">TOC marker</i>
-                    
+                    <h2>Why?</h2>
+                    <p>No sane person would ever attempt to work with word on a code-level, right? It is closed-source and developed by Microsoft, right? And yet I still made a tool for it?</p>
+                    <p>One day a relative of mine approached me with a problem. He had alot of word files that needed converting to pdf, a few hundred at least. Doing all of that by hand takes to long, so another solution was needed.</p>
+                    <i id="page-toc-1" class="page-toc-scroll-marker">TOC marker</i>
+                    <h2>Printing PDFs</h2>
+                    <p>My first attempt (after searching on Stack Overflow) was to simply print all documents as PDF via Microsofts tools. This has (<a href="https://youtu.be/yeUyxjLhAxU">historically</a>) a few problems.
+                        Firstly, this utilises the Print Spooler and Queue. These are notorically buggy pieces of code which work in mysterious ways against the user. Secondly, an user input is needed to specify the export filename.
+                        I tried tapping straight into the converter and still could not get it running just right with it sometimes just ignoring paths. To add insult to injury, the converter sometimes was just wrong. WortArt e.g. just did not convert properly.</p>
+                    <i id="page-toc-2" class="page-toc-scroll-marker">TOC marker</i>
+                    <h2>Macros</h2>
+                    <p>At some point I was seriously just considering using a macro or AHK-script to do all the work, which would have honestly worked fine. Then I remembered Microsoft Apps are basically just GUIs for Powershell
+                        nowadays, so I researched into how e.g. Teams or Outlook can directly launch other Microsoft services. As it turns out, there is an .NET API for word documented 
+                        <a href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.office.interop.word">here</a>. This API is intended for Word Plugins and interaction with the system. Luckily, this operates on the DOS-level of Windows, 
+                        so everyone with a somewhat recent word can simply interact with it in e.g. Powershell. Powershell is a great tool if utilized correctly and can do almost anything Bash will do for you under Linux. Like with .sh-scripts,
+                        there are .ps1-scripts for Powershell. Someone might just start an instance of word and tell the program to open, export and close documents while looping through a list of filepaths. My solution just consists
+                        of a Powershell script reading in filepaths and then telling word to export them to a fixed path with fixed formatting. This is a bulletproof way to get what you see in word as a PDF and works for basically infintely many files.</p>
+                    <i id="page-toc-3" class="page-toc-scroll-marker">TOC marker</i>
+                    <h2>Further reading</h2>
+                    <p>In the end a solution by my cousin was used. He created a full-fledged C#-program basically doing the same thing, but with a GUI, "because Windows users need that". My script follows quite opposite design principles.
+                        It is however still available at <a href="../files/pdfconv/convert.ps1">this location</a> with <a href="../pdftool.html">a German documentation page detailing how to use it</a>. If you have any questions regarding 
+                        mass conversion/export of Word to PDF or the script feel free to shoot me an <a href="mailto:heinrich-karow@gmx.de" title="heinrich-karow@gmx.de">E-Mail</a>.
+                    </p>
                 </article>
             </main>
 
             <nav class="page-toc">
                 <ul id="page-toc-container">
-                    <li><a href="#page-toc-0">What is it?</a></li>
-                    <li><a href="#page-toc-1">What is its use?</a></li>
-                    <li><a href="#page-toc-2">Why doesn't everyone use it?</a></li>
-                    <li><a href="#page-toc-3">Final verdict</a></li>
+                    <li><a href="#page-toc-0">Why?</a></li>
+                    <li><a href="#page-toc-1">Printing PDFs</a></li>
+                    <li><a href="#page-toc-2">Macros</a></li>
+                    <li><a href="#page-toc-3">Further reading</a></li>
                 </ul>
             </nav>
 
@@ -57,7 +78,7 @@
                                     alt="Icon"
                                 >
                             </a>
-                            <span class="bot-row">© 2021 Philipp Heinrich</span>
+                            <span class="bot-row">© 2022 Philipp Heinrich</span>
                         </li>
                     </ul>
                     <ul class="list-style-none" style="width: 30%"></ul>

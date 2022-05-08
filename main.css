@@ -265,6 +265,33 @@ a:focus {
     text-decoration: none;
 }
 
+.page-toc .mini {
+    color: var(--sublink-color);
+    display: flex;
+    font-size: 0.7rem;
+    overflow: hidden;
+    padding-bottom: 0;
+    padding-top: 10px;
+    line-height: 0.9rem;
+    text-overflow: ellipsis;
+    white-space: normal;
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
+
+.page-toc .mini::before {
+    background-color: var(--color-background);
+    color: var(--accent-color);
+    content: ">";
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-left: -0.9rem;
+    padding-right: 0.5rem;
+    text-align: right;
+    width: 1.5rem;
+}
+
 /* Toc markers are used as anchors since sticky headers interfere with scrollto when scrolling up. */
 
 .page-toc-scroll-marker {

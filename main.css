@@ -214,7 +214,6 @@ a:focus {
 .page-toc {
     height: 100vh;
     overflow-x: hidden;
-    overflow-y: scroll;
     padding-right: var(--vertical-padding);
     position: fixed;
     right: 0;
